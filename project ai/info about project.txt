@@ -1,0 +1,35 @@
+ Agent Design for Treasure Hunt Game (PEAS):
+
+
+Performance	Collect all treasures, avoid walls, fewest steps
+Environment	2D maze grid with walls and treasures
+Actuators	Player movement (up, down, left, right)
+Sensors	             Grid state, player position, treasure locations
+
+
+
+ODESDA for Treasure Hunt Game:
+
+
+Property	Value
+Observable	Fully Observable
+Deterministic	Deterministic
+Episodic	Sequential
+Static	             Static
+Discrete	Discrete
+Agent	            Single Agent
+
+
+ Agent Basic Type: Goal-based agent
+
+Problem Formulation:
+
+
+Initial State	             Player starts at position (0, 0) on the grid.
+Actions   	             Player can move Up, Down, Left, or Right if the target cell is not a wall (grid value ≠ 1).
+Transition Model	Player can move from current position (r, c) to adjacent position (r′, c′) if grid[r′][c′] ≠ 1 (i.e., the target cell is not a wall).
+Goal Test	            The goal is to reach any cell that contains a treasure (grid value = 2).
+Path Cost	            Each move has a cost of 1. Total path cost = number of moves taken to reach the treasure.
+
+
+
