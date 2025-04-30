@@ -14,7 +14,7 @@ pygame.init()
 win_width = cols * tile_size
 win_height = rows * tile_size + 100  # extra space for message box
 win = pygame.display.set_mode((win_width, win_height))
-pygame.display.set_caption("💎 BFS Treasure Hunt")
+pygame.display.set_caption(" BFS Treasure Hunt")
 
 # Load images
 try:
@@ -158,9 +158,9 @@ def main():
 
         message = None
         if game_over and treasures_collected == treasure_count:
-            message = "🎉 You Win! Press R to Restart"
+            message = " You Win! Press R to Restart"
         elif game_over:
-            message = "❌ No Path Found. Press R to Restart"
+            message = " No Path Found. Press R to Restart"
 
         draw(grid, path if path else set(), current=player, message=message)
 
